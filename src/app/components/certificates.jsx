@@ -1,19 +1,23 @@
 import { motion } from 'motion/react';
 import { Award, Calendar, ExternalLink } from 'lucide-react';
+import jsCert from "../../assets/74cb8bee-7731-43a5-bdec-d5f42c97c210.png";
+import reactCert from "../../assets/b51affe4-9a1c-4dbe-8941-90f5944d7d38.png";
 
 const Certificates = () => {
     const certs = [
         {
-            title: "React - The Complete Guide 2024",
-            issuer: "Udemy",
-            date: "Ene 2024",
-            link: "#"
+            title: "JavaScript",
+            issuer: "CoderHouse",
+            date: "Abr - Jun 2025",
+            link: "https://pub.coderhouse.com/certificates/74cb8bee-7731-43a5-bdec-d5f42c97c210?v=1",
+            img: jsCert
         },
         {
-            title: "Node.js Advanced Concepts",
-            issuer: "Platzi",
-            date: "Feb 2024",
-            link: "#"
+            title: "React Js",
+            issuer: "CoderHouse",
+            date: "Jun - Jul 2025",
+            link: "https://pub.coderhouse.com/certificates/b51affe4-9a1c-4dbe-8941-90f5944d7d38?v=1",
+            img: reactCert
         },
         {
             title: "AWS Certified Developer",
@@ -77,6 +81,7 @@ const Certificates = () => {
                                 className="bg-[#1e293b] p-6 rounded-xl border border-white/5 hover:border-blue-500/40 transition-colors flex flex-col justify-between"
                             >
                                 <div>
+                                    <img src={cert.img} alt={cert.title} className="w-full h-auto mb-4" />
                                     <div className="flex items-start justify-between mb-4">
                                         <div className="p-2 bg-blue-500/20 rounded-lg text-blue-400">
                                             <Award size={24} />
