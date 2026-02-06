@@ -8,9 +8,10 @@
         "contact": "Contacto"
     },
     "hero": {
-        "title": "Hola, soy [Tu Nombre]",
-        "subtitle": "Desarrollador de Software",
-        "description": "Apasionado por crear soluciones innovadoras y eficientes.",
+        "title": "Hola, soy Sergio Martín García",
+        "subtitle": "Desarrollador de",
+        "subtitle2": "Software",
+        "description": "Construyendo experiencias digitales modernas, escalables y visualmente impactantes. Especializado en React, Node.js y .NET, con experiencia en el desarrollo de aplicaciones de escritorio y web.",
         "button": "Ver Proyectos"
     },
     "about": {
@@ -46,5 +47,9 @@
     "contact": {
         "title": "Contacto",
         "description": "Aquí puedes contactarme."
+    },
+    "footer": {
+        "title": "Realizado por Sergio Martín García",
+        "description": "Construido con React, Tailwind & Motion."
     }
 }

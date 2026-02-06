@@ -3,9 +3,11 @@ import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import profileImage from '../../assets/WhatsApp Image 2026-02-05 at 22.30.47.jpeg';
 import cv from '../../assets/CVSergioGarciaNuevo.pdf';
 import constancia from '../../assets/Constancia.pdf';
+import { useTranslation } from 'react-i18next';
 
 
 const Hero = () => {
+    const { t } = useTranslation();
     const scrollToProjects = () => {
         document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -21,16 +23,15 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h2 className="text-4xl text-blue-400 font-semibold mb-2">Hola, soy Sergio Martín García</h2>
+                        <h2 className="text-4xl text-blue-400 font-semibold mb-2">{t('hero.title')}</h2>
                         <h1 className="text-5xl lg:text-5xl font-bold mb-2 text-white leading-tight">
-                            Desarrollador de<br />
+                            {t('hero.subtitle')}<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-                                Software
+                                {t('hero.subtitle2')}
                             </span>
                         </h1>
                         <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                            Construyendo experiencias digitales modernas, escalables y visualmente impactantes.
-                            Especializado en React, Node.js y .NET, con experiencia en el desarrollo de aplicaciones de escritorio y web.
+                            {t('hero.description')}
                         </p>
 
                         <div className="flex gap-4 justify-center lg:justify-start items-center mb-10">
@@ -80,7 +81,7 @@ const Hero = () => {
                             onClick={scrollToProjects}
                             className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold text-white hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/20"
                         >
-                            Ver Proyectos
+                            {t('hero.button')}
                         </button>
                     </motion.div>
                 </div>

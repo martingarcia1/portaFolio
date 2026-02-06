@@ -8,9 +8,10 @@
         "contact": "Contact"
     },
     "hero": {
-        "title": "Hi, I'm [Your Name]",
-        "subtitle": "Software Developer",
-        "description": "Passionate about creating innovative and efficient solutions.",
+        "title": "Hi, I'm Sergio Martín García",
+        "subtitle": "Software",
+        "subtitle2": "Developer",
+        "description": "Passionate about creating innovative and efficient solutions, especialized in React, Node.js and .NET, with experience in the development of desktop and web applications.",
         "button": "View Projects"
     },
     "about": {
@@ -46,5 +47,9 @@
     "contact": {
         "title": "Contact",
         "description": "Here you can contact me."
+    },
+    "footer": {
+        "title": "Realized by Sergio Martín García",
+        "description": "Built with React, Tailwind & Motion."
     }
 }
