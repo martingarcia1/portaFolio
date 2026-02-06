@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import profileImage from '../../assets/WhatsApp Image 2026-02-05 at 22.30.47.jpeg';
+import cv from '../../assets/CVSergioGarciaNuevo.pdf';
+
 
 const Hero = () => {
     const scrollToProjects = () => {
@@ -52,6 +54,15 @@ const Hero = () => {
                                 className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5"
                             >
                                 <Mail size={24} />
+                            </a>
+                            <a
+                                href={cv}
+                                download
+                                className="flex items-center gap-2 px-5 py-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5 text-sm font-medium group"
+                                title="Descargar CV"
+                            >
+                                <span>Descargar CV</span>
+                                <ArrowDown size={18} className="group-hover:translate-y-0.5 transition-transform" />
                             </a>
                         </div>
 
