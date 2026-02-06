@@ -44,19 +44,19 @@ const Contact = () => {
                                     <div className="p-3 bg-blue-500/10 rounded-full text-blue-400 mr-4">
                                         <Mail size={20} />
                                     </div>
-                                    <span>contact@example.com</span>
+                                    <span>martingarcia.code@gmail.com</span>
                                 </div>
                                 <div className="flex items-center text-gray-300">
                                     <div className="p-3 bg-blue-500/10 rounded-full text-blue-400 mr-4">
                                         <Phone size={20} />
                                     </div>
-                                    <span>+1 (234) 567-890</span>
+                                    <span>+54 (381) 3487804</span>
                                 </div>
                                 <div className="flex items-center text-gray-300">
                                     <div className="p-3 bg-blue-500/10 rounded-full text-blue-400 mr-4">
                                         <MapPin size={20} />
                                     </div>
-                                    <span>Remote / Worldwide</span>
+                                    <span>Remote / San Miguel de Tucumán, Argentina</span>
                                 </div>
                             </div>
                         </div>

@@ -31,13 +31,26 @@ const Hero = () => {
                         </p>
 
                         <div className="flex gap-4 justify-center lg:justify-start items-center mb-10">
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5">
+                            <a
+                                href="https://github.com/martingarcia1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5"
+                            >
                                 <Github size={24} />
                             </a>
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5">
+                            <a
+                                href="https://www.linkedin.com/in/sergio-martingarcia/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5"
+                            >
                                 <Linkedin size={24} />
                             </a>
-                            <a href="mailto:contact@example.com" className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5">
+                            <a
+                                href="mailto:martingarcia.code@gmail.com"
+                                className="p-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5"
+                            >
                                 <Mail size={24} />
                             </a>
                         </div>
