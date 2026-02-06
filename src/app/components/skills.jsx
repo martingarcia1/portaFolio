@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
+    const { t } = useTranslation();
     const skillCategories = [
         {
             title: "Frontend",
@@ -40,8 +42,8 @@ const Skills = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl font-bold text-white mb-4">Habilidades Técnicas</h2>
-                    <p className="text-gray-400">Mi stack tecnológico y nivel de competencia actual.</p>
+                    <h2 className="text-3xl font-bold text-white mb-4">{t('skills.title')}</h2>
+                    <p className="text-gray-400">{t('skills.description')}</p>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">

@@ -1,0 +1,50 @@
+{
+    "header": {
+        "hero": "Inicio",
+        "about": "Sobre Mí",
+        "projects": "Proyectos",
+        "skills": "Habilidades",
+        "certificates": "Certificados",
+        "contact": "Contacto"
+    },
+    "hero": {
+        "title": "Hola, soy [Tu Nombre]",
+        "subtitle": "Desarrollador de Software",
+        "description": "Apasionado por crear soluciones innovadoras y eficientes.",
+        "button": "Ver Proyectos"
+    },
+    "about": {
+        "title": "Sobre Mí",
+        "description": "Soy un desarrollador apasionado por crear soluciones tecnológicas que impactan. Con una base sólida en el Desarrollo de Software y años de experiencia practicando, me dedico a transformar ideas complejas en Software intuitivo y de alto rendimiento. Siempre estoy aprendiendo y mejorando mi stack tecnológico.",
+        "features": [
+            {
+                "title": "Código Limpio",
+                "description": "Arquitectura escalable y mantenible."
+            },
+            {
+                "title": "Innovación",
+                "description": "Soluciones modernas y eficientes."
+            },
+            {
+                "title": "Trabajo en Equipo",
+                "description": "Comunicación clara y colaboración."
+            }
+        ]
+    },
+    "projects": {
+        "title": "Proyectos",
+        "description": "Aquí puedes ver algunos de mis proyectos más destacados."
+    },
+    "skills": {
+        "title": "Habilidades",
+        "description": "Estas son algunas de mis habilidades técnicas."
+    },
+    "certificates": {
+        "title": "Certificados",
+        "description": "Aquí puedes ver algunos de mis certificados."
+    },
+    "contact": {
+        "title": "Contacto",
+        "description": "Aquí puedes contactarme."
+    }
+}

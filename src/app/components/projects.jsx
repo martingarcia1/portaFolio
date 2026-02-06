@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 import { Github, ExternalLink } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+    const { t } = useTranslation();
     const projects = [
         {
             title: "E-Commerce Platform",
@@ -32,9 +34,9 @@ const Projects = () => {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl font-bold text-white mb-4">Proyectos Destacados</h2>
+                    <h2 className="text-3xl font-bold text-white mb-4">{t('projects.title')}</h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Una selección de mis trabajos más recientes, demostrando mis habilidades en el desarrollo de software.
+                        {t('projects.description')}
                     </p>
                 </motion.div>
 

@@ -2,8 +2,10 @@ import { motion } from 'motion/react';
 import { Award, Calendar, ExternalLink } from 'lucide-react';
 import jsCert from "../../assets/74cb8bee-7731-43a5-bdec-d5f42c97c210.png";
 import reactCert from "../../assets/b51affe4-9a1c-4dbe-8941-90f5944d7d38.png";
+import { useTranslation } from 'react-i18next';
 
 const Certificates = () => {
+    const { t } = useTranslation();
     const certs = [
         {
             title: "JavaScript",
@@ -53,9 +55,9 @@ const Certificates = () => {
                             viewport={{ once: true }}
                             className="sticky top-24"
                         >
-                            <h2 className="text-3xl font-bold text-white mb-6">Aprendizaje Continuo</h2>
+                            <h2 className="text-3xl font-bold text-white mb-6">{t('certificates.title')}</h2>
                             <p className="text-gray-400 mb-8 leading-relaxed">
-                                Mi compromiso con la excelencia técnica me impulsa a mantenerme actualizado constantemente.
+                                {t('certificates.description')}
                             </p>
 
                             <div className="grid grid-cols-2 gap-4">

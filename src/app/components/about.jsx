@@ -1,23 +1,25 @@
 import { motion } from 'motion/react';
 import { Code2, Rocket, Users } from 'lucide-react';
 import profileImage from '../../assets/WhatsApp Image 2025-07-02 at 14.46.00.jpeg';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+    const { t } = useTranslation();
     const features = [
         {
             icon: <Code2 size={24} />,
-            title: "Código Limpio",
-            desc: "Arquitectura escalable y mantenible."
+            title: t('about.features.0.title'),
+            desc: t('about.features.0.description')
         },
         {
             icon: <Rocket size={24} />,
-            title: "Innovación",
-            desc: "Soluciones modernas y eficientes."
+            title: t('about.features.1.title'),
+            desc: t('about.features.1.description')
         },
         {
             icon: <Users size={24} />,
-            title: "Trabajo en Equipo",
-            desc: "Comunicación clara y colaboración."
+            title: t('about.features.2.title'),
+            desc: t('about.features.2.description')
         }
     ];
 
@@ -45,13 +47,10 @@ const About = () => {
                     {/* Text Content */}
                     <div>
                         <h2 className="text-3xl font-bold mb-6 text-white text-center md:text-left">
-                            Sobre <span className="text-blue-400">Mí</span>
+                            {t('about.title')}
                         </h2>
                         <p className="text-gray-300 leading-relaxed mb-8">
-                            Soy un desarrollador apasionado por crear soluciones tecnológicas que impactan.
-                            Con una base sólida en el Desarrollo de Software y años de experiencia practicando,
-                            me dedico a transformar ideas complejas en Software intuitivo y de alto rendimiento.
-                            Siempre estoy aprendiendo y mejorando mi stack tecnológico.
+                            {t('about.description')}
                         </p>
 
                         <div className="grid gap-4">

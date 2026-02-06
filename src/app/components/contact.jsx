@@ -2,8 +2,10 @@ import { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import { Send, MapPin, Phone, Mail, Loader2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+    const { t } = useTranslation();
     const formRef = useRef();
     const [isLoading, setIsLoading] = useState(false);
     const [formStatus, setFormStatus] = useState(null); // 'success' | 'error' | null
@@ -43,10 +45,9 @@ const Contact = () => {
 
                         {/* Contact Info */}
                         <div>
-                            <h2 className="text-3xl font-bold text-white mb-6">Contáctame</h2>
+                            <h2 className="text-3xl font-bold text-white mb-6">{t('contact.title')}</h2>
                             <p className="text-gray-400 mb-8">
-                                ¿Tienes un proyecto en mente o simplemente quieres saludar?
-                                Estoy disponible para nuevas oportunidades.
+                                {t('contact.description')}
                             </p>
 
                             <div className="space-y-6">

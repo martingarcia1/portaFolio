@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import profileImage from '../../assets/WhatsApp Image 2026-02-05 at 22.30.47.jpeg';
 import cv from '../../assets/CVSergioGarciaNuevo.pdf';
+import constancia from '../../assets/Constancia.pdf';
 
 
 const Hero = () => {
@@ -21,7 +22,7 @@ const Hero = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <h2 className="text-4xl text-blue-400 font-semibold mb-2">Hola, soy Sergio Martín García</h2>
-                        <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+                        <h1 className="text-5xl lg:text-5xl font-bold mb-2 text-white leading-tight">
                             Desarrollador de<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
                                 Software
@@ -62,6 +63,15 @@ const Hero = () => {
                                 title="Descargar CV"
                             >
                                 <span>Descargar CV</span>
+                                <ArrowDown size={18} className="group-hover:translate-y-0.5 transition-transform" />
+                            </a>
+                            <a
+                                href={constancia}
+                                download
+                                className="flex items-center gap-2 px-5 py-2 bg-white/5 rounded-full hover:bg-white/10 hover:text-blue-400 transition-all border border-white/5 text-sm font-medium group"
+                                title="Descargar Constancia"
+                            >
+                                <span>Descargar Constancia</span>
                                 <ArrowDown size={18} className="group-hover:translate-y-0.5 transition-transform" />
                             </a>
                         </div>

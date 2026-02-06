@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
+    const { t } = useTranslation();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -24,12 +27,12 @@ const Header = () => {
     };
 
     const navItems = [
-        { name: 'Inicio', id: 'hero' },
-        { name: 'Sobre Mí', id: 'about' },
-        { name: 'Proyectos', id: 'projects' },
-        { name: 'Habilidades', id: 'skills' },
-        { name: 'Certificados', id: 'certificates' },
-        { name: 'Contacto', id: 'contact' },
+        { name: t('header.hero'), id: 'hero' },
+        { name: t('header.about'), id: 'about' },
+        { name: t('header.projects'), id: 'projects' },
+        { name: t('header.skills'), id: 'skills' },
+        { name: t('header.certificates'), id: 'certificates' },
+        { name: t('header.contact'), id: 'contact' },
     ];
 
     return (
@@ -48,25 +51,31 @@ const Header = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <nav className="hidden md:flex space-x-8">
+                <nav className="hidden md:flex space-x-8 items-center">
                     {navItems.map((item) => (
                         <button
-                            key={item.name}
+                            key={item.id}
                             onClick={() => scrollToSection(item.id)}
                             className="text-gray-300 hover:text-white transition-colors duration-300 text-sm font-medium"
                         >
                             {item.name}
                         </button>
                     ))}
+                    <div className="border-l border-gray-700 pl-6 ml-2">
+                        <LanguageSwitcher />
+                    </div>
                 </nav>
 
                 {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-white"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                <div className="md:hidden flex items-center gap-4">
+                    <LanguageSwitcher />
+                    <button
+                        className="text-white"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
 
                 {/* Mobile Menu Overlay */}
                 {isMobileMenuOpen && (
@@ -77,7 +86,7 @@ const Header = () => {
                     >
                         {navItems.map((item) => (
                             <button
-                                key={item.name}
+                                key={item.id}
                                 onClick={() => scrollToSection(item.id)}
                                 className="text-left text-gray-300 hover:text-white py-2 px-4 rounded hover:bg-white/5"
                             >

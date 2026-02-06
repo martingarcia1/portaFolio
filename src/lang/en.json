@@ -1,0 +1,50 @@
+{
+    "header": {
+        "hero": "Home",
+        "about": "About Me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "certificates": "Certificates",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Hi, I'm [Your Name]",
+        "subtitle": "Software Developer",
+        "description": "Passionate about creating innovative and efficient solutions.",
+        "button": "View Projects"
+    },
+    "about": {
+        "title": "About Me",
+        "description": "I am a developer passionate about creating technological solutions that make an impact. With a solid foundation in Software Development and years of experience practicing, I dedicate myself to transforming complex ideas into intuitive and high-performance software. I am always learning and improving my technological stack.",
+        "features": [
+            {
+                "title": "Clean Code",
+                "description": "Scalable and maintainable architecture."
+            },
+            {
+                "title": "Innovation",
+                "description": "Modern and efficient solutions."
+            },
+            {
+                "title": "Teamwork",
+                "description": "Clear communication and collaboration."
+            }
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "Here you can see some of my most outstanding projects."
+    },
+    "skills": {
+        "title": "Skills",
+        "description": "These are some of my technical skills."
+    },
+    "certificates": {
+        "title": "Certificates",
+        "description": "Here you can see some of my certificates."
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Here you can contact me."
+    }
+}
