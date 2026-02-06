@@ -1,15 +1,17 @@
 import { motion } from 'motion/react';
 import { Github, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import meras from "../../assets/image.png";
 
 const Projects = () => {
     const { t } = useTranslation();
     const projects = [
         {
-            title: "E-Commerce Platform",
-            tech: ["React", "Node.js", "MongoDB", "Stripe"],
-            desc: "Plataforma completa de comercio electrónico con pasarela de pagos integrada.",
-            links: { github: "#", demo: "#" }
+            title: "E-Commerce de indumentaria meras",
+            tech: ["React", "Tailwind", "MySQL Workbench", "NestJS"],
+            desc: "Plataforma completa de e-commerce de indumentaria con personalizador de prendas 2D.",
+            links: { github: "https://github.com/martingarcia1/meras", demo: "https://meras-front.vercel.app/" },
+            image: meras
         },
         {
             title: "Task Management App",
@@ -54,7 +56,7 @@ const Projects = () => {
                             <div className="h-48 bg-gray-800 relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e293b] to-transparent opacity-60 z-10" />
                                 <div className="w-full h-full flex items-center justify-center text-gray-600">
-                                    Project Image
+                                    <img src={project.image} alt="" />
                                 </div>
                             </div>
 
