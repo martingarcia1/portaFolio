@@ -1,0 +1,10 @@
+:root {
+  --color-primary: #3b82f6; /* blue-500 */
+  --color-secondary: #9333ea; /* purple-600 */
+  --color-background: #111927;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+}

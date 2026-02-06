@@ -1,0 +1,27 @@
+/* Gradiente de fondo personalizado */
+body {
+    background-color: #111927;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(211.64, 77%, 40%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(218.00, 39%, 11%) 0, transparent 55%);
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111927;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
