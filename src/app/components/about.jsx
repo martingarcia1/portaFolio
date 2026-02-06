@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Code2, Rocket, Users } from 'lucide-react';
+import profileImage from '../../assets/WhatsApp Image 2025-07-02 at 14.46.00.jpeg';
 
 const About = () => {
     const features = [
@@ -33,7 +34,11 @@ const About = () => {
                     <div className="relative group">
                         <div className="absolute inset-0 bg-blue-500/10 rounded-2xl transform rotate-3 transition-transform group-hover:rotate-6"></div>
                         <div className="relative bg-[#1e293b] rounded-2xl p-2 border border-white/10 overflow-hidden h-80 flex items-center justify-center">
-                            <span className="text-gray-500 italic">Workspace Image Placeholder</span>
+                            <img
+                                className="w-full h-full object-cover"
+                                src={profileImage}
+                                alt="Profile"
+                            />
                         </div>
                     </div>
 
