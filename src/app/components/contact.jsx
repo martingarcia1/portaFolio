@@ -1,23 +1,33 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion } from 'motion/react';
-import { Send, MapPin, Phone, Mail } from 'lucide-react';
+import { Send, MapPin, Phone, Mail, Loader2 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
+    const formRef = useRef();
+    const [isLoading, setIsLoading] = useState(false);
+    const [formStatus, setFormStatus] = useState(null); // 'success' | 'error' | null
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted:', formData);
-        alert('¡Gracias por tu mensaje! (Funcionalidad demo)');
+        setIsLoading(true);
+        setFormStatus(null);
+
+        try {
+            await emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                formRef.current,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+            setFormStatus('success');
+            formRef.current.reset();
+        } catch (error) {
+            console.error('FAILED...', error);
+            setFormStatus('error');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -50,7 +60,7 @@ const Contact = () => {
                                     <div className="p-3 bg-blue-500/10 rounded-full text-blue-400 mr-4">
                                         <Phone size={20} />
                                     </div>
-                                    <span>+54 (381) 3487804</span>
+                                    <span>+54 (381) 348-7804</span>
                                 </div>
                                 <div className="flex items-center text-gray-300">
                                     <div className="p-3 bg-blue-500/10 rounded-full text-blue-400 mr-4">
@@ -62,15 +72,13 @@ const Contact = () => {
                         </div>
 
                         {/* Form */}
-                        <form onSubmit={handleSubmit} className="space-y-4">
+                        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-400 mb-1">Nombre</label>
                                 <input
                                     type="text"
-                                    name="name"
+                                    name="user_name"
                                     required
-                                    value={formData.name}
-                                    onChange={handleChange}
                                     className="w-full bg-[#111927] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                                     placeholder="Tu nombre"
                                 />
@@ -80,10 +88,8 @@ const Contact = () => {
                                 <label className="block text-sm font-medium text-gray-400 mb-1">Email</label>
                                 <input
                                     type="email"
-                                    name="email"
+                                    name="user_email"
                                     required
-                                    value={formData.email}
-                                    onChange={handleChange}
                                     className="w-full bg-[#111927] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
                                     placeholder="tu@email.com"
                                 />
@@ -95,8 +101,6 @@ const Contact = () => {
                                     name="message"
                                     required
                                     rows="4"
-                                    value={formData.message}
-                                    onChange={handleChange}
                                     className="w-full bg-[#111927] border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all resize-none"
                                     placeholder="¿Cómo puedo ayudarte?"
                                 ></textarea>
@@ -104,10 +108,34 @@ const Contact = () => {
 
                             <button
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                                disabled={isLoading}
+                                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                Enviar Mensaje <Send size={18} />
+                                {isLoading ? (
+                                    <>Enviando... <Loader2 size={18} className="animate-spin" /></>
+                                ) : (
+                                    <>Enviar Mensaje <Send size={18} /></>
+                                )}
                             </button>
+
+                            {formStatus === 'success' && (
+                                <motion.p
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    className="text-green-400 text-sm text-center mt-2"
+                                >
+                                    ¡Mensaje enviado con éxito!
+                                </motion.p>
+                            )}
+                            {formStatus === 'error' && (
+                                <motion.p
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    className="text-red-400 text-sm text-center mt-2"
+                                >
+                                    Hubo un error al enviar el mensaje. Inténtalo de nuevo.
+                                </motion.p>
+                            )}
                         </form>
 
                     </div>
