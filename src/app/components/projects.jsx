@@ -34,7 +34,7 @@ const Projects = () => {
                 >
                     <h2 className="text-3xl font-bold text-white mb-4">Proyectos Destacados</h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
-                        Una selección de mis trabajos más recientes, demostrando capacidades full stack y diseño de UI/UX.
+                        Una selección de mis trabajos más recientes, demostrando mis habilidades en el desarrollo de software.
                     </p>
                 </motion.div>
 

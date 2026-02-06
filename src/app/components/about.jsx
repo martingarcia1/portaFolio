@@ -49,9 +49,9 @@ const About = () => {
                         </h2>
                         <p className="text-gray-300 leading-relaxed mb-8">
                             Soy un desarrollador apasionado por crear soluciones tecnológicas que impactan.
-                            Con una base sólida en ciencias de la computación y años de experiencia práctica,
-                            me dedico a transformar ideas complejas en aplicaciones web intuitivas y de alto rendimiento.
-                            Siempre estoy buscando nuevas tecnologías para incorporar a mi stack.
+                            Con una base sólida en el Desarrollo de Software y años de experiencia practicando,
+                            me dedico a transformar ideas complejas en Software intuitivo y de alto rendimiento.
+                            Siempre estoy aprendiendo y mejorando mi stack tecnológico.
                         </p>
 
                         <div className="grid gap-4">

@@ -18,16 +18,16 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <h2 className="text-xl text-blue-400 font-semibold mb-2">Hola, soy</h2>
-                        <h1 className="text-5xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-                            Desarrollador <br />
+                        <h2 className="text-4xl text-blue-400 font-semibold mb-2">Hola, soy Sergio Martín García</h2>
+                        <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+                            Desarrollador de<br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-                                Full Stack
+                                Software
                             </span>
                         </h1>
                         <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
                             Construyendo experiencias digitales modernas, escalables y visualmente impactantes.
-                            Especializado en React y ecosistemas cloud.
+                            Especializado en React, Node.js y .NET, con experiencia en el desarrollo de aplicaciones de escritorio y web.
                         </p>
 
                         <div className="flex gap-4 justify-center lg:justify-start items-center mb-10">
