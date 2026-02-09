@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { Github, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import meras from "../../assets/image.png";
+import barberiaLM from "../../assets/image copy.png";
+import { image } from 'motion/react-client';
 
 const Projects = () => {
     const { t } = useTranslation();
@@ -14,16 +16,23 @@ const Projects = () => {
             image: meras
         },
         {
-            title: "Task Management App",
-            tech: ["React Native", "Firebase", "TypeScript"],
-            desc: "Aplicación móvil para gestión de tareas colaborativas en tiempo real.",
-            links: { github: "#", demo: "#" }
+            title: "Sistema de Puntos para Barbería",
+            tech: ["React JS", "Node JS", "Express", "MySQL Workbench", "Tailwind", "JWT"],
+            desc: "Sistema de Puntos para Barbería",
+            links: { github: "https://github.com/martingarcia1/BarberiaLM", demo: "https://barberia-lm-8o5c.vercel.app" },
+            image: barberiaLM
         },
         {
             title: "Social Media Dashboard",
             tech: ["Vue.js", "Express", "PostgreSQL", "Chart.js"],
             desc: "Dashboard analítico para visualización de métricas de redes sociales.",
             links: { github: "#", demo: "#" }
+        },
+        {
+            title: "",
+            tech: ["HTML", "CSS", "JavaScript", "Node JS", "Express", "Morgan"],
+            desc: "E-commerce realizado en vanilla.js",
+            links: { github: "https://github.com/martingarcia1/E-commerce-vanilla.js", demo: "#" }
         }
     ];
 
