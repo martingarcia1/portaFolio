@@ -24,10 +24,10 @@ const Projects = () => {
             image: barberiaLM
         },
         {
-            title: "Social Media Dashboard",
+            title: "Avanzar Group",
             tech: ["Vue.js", "Express", "PostgreSQL", "Chart.js"],
-            desc: "Dashboard analítico para visualización de métricas de redes sociales.",
-            links: { github: "#", demo: "#" }
+            desc: "Pagina web para Avanzar Group",
+            links: { github: "https://github.com/martingarcia1/avanzar-web", demo: "#" }
         },
         {
             title: "MG Store - E-commerce Vanilla JS",
