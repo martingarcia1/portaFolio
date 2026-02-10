@@ -5,6 +5,7 @@ import meras from "../../assets/image.png";
 import barberiaLM from "../../assets/image copy.png";
 import { image } from 'motion/react-client';
 import ecommerce from "../../assets/mg.png";
+import avanzar from "../../assets/avanzar.png";
 
 const Projects = () => {
     const { t } = useTranslation();
@@ -27,7 +28,8 @@ const Projects = () => {
             title: "Avanzar Group",
             tech: ["Vue.js", "Express", "PostgreSQL", "Chart.js"],
             desc: "Pagina web para Avanzar Group",
-            links: { github: "https://github.com/martingarcia1/avanzar-web", demo: "#" }
+            links: { github: "https://github.com/martingarcia1/avanzar-web", demo: "https://avanzar-web.vercel.app" },
+            image: avanzar
         },
         {
             title: "MG Store - E-commerce Vanilla JS",
