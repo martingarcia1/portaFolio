@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import meras from "../../assets/image.png";
 import barberiaLM from "../../assets/image copy.png";
 import { image } from 'motion/react-client';
+import ecommerce from "../../assets/mg.png";
 
 const Projects = () => {
     const { t } = useTranslation();
@@ -29,10 +30,11 @@ const Projects = () => {
             links: { github: "#", demo: "#" }
         },
         {
-            title: "",
+            title: "MG Store - E-commerce Vanilla JS",
             tech: ["HTML", "CSS", "JavaScript", "Node JS", "Express", "Morgan"],
             desc: "E-commerce realizado en vanilla.js",
-            links: { github: "https://github.com/martingarcia1/E-commerce-vanilla.js", demo: "#" }
+            links: { github: "https://github.com/martingarcia1/E-commerce-vanilla.js", demo: "https://e-commerce-vanilla-js-mu.vercel.app" },
+            image: ecommerce
         }
     ];
 
