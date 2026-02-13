@@ -39,7 +39,29 @@
     },
     "skills": {
         "title": "Skills",
-        "description": "These are some of my technical skills."
+        "description": "These are some of my technical skills.",
+        "title2": "Technical Skills",
+        "title3": "Soft Skills",
+        "category": [
+            {
+                "title": "Languages"
+            },
+            {
+                "title": "Frontend"
+            },
+            {
+                "title": "Backend"
+            },
+            {
+                "title": "Databases"
+            },
+            {
+                "title": "Libraries"
+            },
+            {
+                "title": "Tools & Others"
+            }
+        ]
     },
     "certificates": {
         "title": "Certificates",

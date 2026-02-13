@@ -89,7 +89,7 @@ const Skills = () => {
                     {/* Technical Skills */}
                     <div>
                         <h3 className="text-2xl font-bold text-white mb-8 text-center lg:text-left border-b border-white/10 pb-4">
-                            Habilidades Técnicas
+                            {t('skills.title2')}
                         </h3>
                         <div className="grid gap-8">
                             {techSkills.map((cat, idx) => (
@@ -100,7 +100,7 @@ const Skills = () => {
                                     viewport={{ once: true }}
                                     transition={{ delay: idx * 0.1 }}
                                 >
-                                    <h4 className="text-lg font-semibold text-blue-400 mb-4">{cat.category}</h4>
+                                    <h4 className="text-lg font-semibold text-blue-400 mb-4">{t(cat.category)}</h4>
                                     <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
                                         {cat.items.map((skill, sIdx) => (
                                             <div
@@ -110,7 +110,7 @@ const Skills = () => {
                                                 <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
                                                     {skill.icon}
                                                 </div>
-                                                <span className="text-xs text-gray-300 font-medium text-center">{skill.name}</span>
+                                                <span className="text-xs text-gray-300 font-medium text-center">{t(skill.name)}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -122,7 +122,7 @@ const Skills = () => {
                     {/* Soft Skills */}
                     <div>
                         <h3 className="text-2xl font-bold text-white mb-8 text-center lg:text-left border-b border-white/10 pb-4">
-                            Habilidades Blandas
+                            {t('skills.title3')}
                         </h3>
                         <div className="grid gap-4">
                             {softSkills.map((skill, idx) => (
