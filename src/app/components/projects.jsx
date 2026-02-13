@@ -3,9 +3,10 @@ import { Github, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import meras from "../../assets/image.png";
 import barberiaLM from "../../assets/image copy.png";
-import { image } from 'motion/react-client';
+import { desc, image, title } from 'motion/react-client';
 import ecommerce from "../../assets/mg.png";
 import avanzar from "../../assets/avanzar.png";
+import simulador from "../../assets/simulador.png";
 
 const Projects = () => {
     const { t } = useTranslation();
@@ -26,7 +27,7 @@ const Projects = () => {
         },
         {
             title: "Avanzar Group",
-            tech: ["Vue.js", "Express", "PostgreSQL", "Chart.js"],
+            tech: ["ReactJS", "Tailwind"],
             desc: "Pagina web para Avanzar Group",
             links: { github: "https://github.com/martingarcia1/avanzar-web", demo: "https://avanzar-web.vercel.app" },
             image: avanzar
@@ -37,6 +38,19 @@ const Projects = () => {
             desc: "E-commerce realizado en vanilla.js",
             links: { github: "https://github.com/martingarcia1/E-commerce-vanilla.js", demo: "https://e-commerce-vanilla-js-mu.vercel.app" },
             image: ecommerce
+        },
+        {
+            title: "Simulador Interactivo - CotizaYa",
+            tech: ["HTML", "CSS", "JavaScript"],
+            desc: "Simulador Interactivo realizado como proyecto final para la Carrera de Desarrollo Frontend React, del curso de JavaScript de CoderHouse",
+            links: { github: "https://github.com/martingarcia1/Simulador", demo: "https://simulador-gamma-murex.vercel.app" },
+            image: simulador
+        },
+        {
+            title: "E-commerce React.JS",
+            tech: ["React.Js", "JavaScript", "CSS", "TailwindCss", "Node.JS", "Firebase"],
+            desc: "Este e-commerce está diseñado para ofrecer una experiencia de usuario fluida en la compra de cursos online. Los usuarios pueden explorar diferentes categorías, ver detalles de los cursos y realizar compras de manera intuitiva.",
+            links: { github: "https://github.com/martingarcia1/e-commerce-react", demo: "https://e-commerce-react-lovat.vercel.app/" }
         }
     ];
 
